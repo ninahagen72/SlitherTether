@@ -74,6 +74,7 @@ TetherToken (../../share/tether.sol#315-451) has incorrect ERC20 function interf
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface
 ## INFO:Detectors:
 Pragma version^0.4.17 (../../share/tether.sol#5) allows old versions
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 ## INFO:Detectors:
 Variable ERC20Basic._totalSupply (../../share/tether.sol#82) is not in mixedCase
@@ -135,4 +136,5 @@ setParams(uint256,uint256) should be declared external:
 	- TetherToken.setParams(uint256,uint256) (../../share/tether.sol#429-438)
 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-as-external
-INFO:Slither:/share/tether.sol analyzed (10 contracts with 40 detectors), 55 result(s) found
+
+Analyzed (10 contracts with 40 detectors), 55 result(s) found
