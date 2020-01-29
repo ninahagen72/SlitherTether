@@ -7,7 +7,6 @@ Results of running slither on tether.sol
     ^ (Relevant source part starts here and spans across multiple lines).
 /share/tether.sol:172:9: Warning: Use of the "var" keyword is deprecated.
         var _allowance = allowed[_from][msg.sender];
-        ^------------^
 
 /share/tether.sol:330:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
     function TetherToken(uint _initialSupply, string _name, string _symbol, uint _decimals) public {
@@ -15,59 +14,45 @@ Results of running slither on tether.sol
 
 /share/tether.sol:136:13: Warning: Invoking events without "emit" prefix is deprecated.
             Transfer(msg.sender, owner, fee);
-            ^------------------------------^
 
 /share/tether.sol:138:9: Warning: Invoking events without "emit" prefix is deprecated.
         Transfer(msg.sender, _to, sendAmount);
-        ^-----------------------------------^
 
 /share/tether.sol:189:13: Warning: Invoking events without "emit" prefix is deprecated.
             Transfer(_from, owner, fee);
-            ^-------------------------^
 
 /share/tether.sol:191:9: Warning: Invoking events without "emit" prefix is deprecated.
         Transfer(_from, _to, sendAmount);
-        ^------------------------------^
 
 /share/tether.sol:208:9: Warning: Invoking events without "emit" prefix is deprecated.
         Approval(msg.sender, _spender, _value);
-        ^------------------------------------^
 
 /share/tether.sol:256:5: Warning: Invoking events without "emit" prefix is deprecated.
     Pause();
-    ^-----^
 
 /share/tether.sol:264:5: Warning: Invoking events without "emit" prefix is deprecated.
     Unpause();
-    ^-------^
 
 /share/tether.sol:283:9: Warning: Invoking events without "emit" prefix is deprecated.
         AddedBlackList(_evilUser);
-        ^-----------------------^
 
 /share/tether.sol:288:9: Warning: Invoking events without "emit" prefix is deprecated.
         RemovedBlackList(_clearedUser);
-        ^----------------------------^
 
 /share/tether.sol:296:9: Warning: Invoking events without "emit" prefix is deprecated.
         DestroyedBlackFunds(_blackListedUser, dirtyFunds);
-        ^-----------------------------------------------^
 
 /share/tether.sol:390:9: Warning: Invoking events without "emit" prefix is deprecated.
         Deprecate(_upgradedAddress);
-        ^-------------------------^
 
 /share/tether.sol:412:9: Warning: Invoking events without "emit" prefix is deprecated.
         Issue(amount);
-        ^-----------^
 
 /share/tether.sol:426:9: Warning: Invoking events without "emit" prefix is deprecated.
         Redeem(amount);
-        ^------------^
 
 /share/tether.sol:437:9: Warning: Invoking events without "emit" prefix is deprecated.
         Params(basisPointsRate, maximumFee);
-        ^---------------------------------^
 
 ## INFO:Detectors:
 UpgradedStandardToken (../../share/tether.sol#307-313) has incorrect ERC20 function interface:ERC20Basic.transfer(address,uint256) (../../share/tether.sol#85)
@@ -85,6 +70,7 @@ TetherToken (../../share/tether.sol#315-451) has incorrect ERC20 function interf
 TetherToken (../../share/tether.sol#315-451) has incorrect ERC20 function interface:TetherToken.transfer(address,uint256) (../../share/tether.sol#340-347)
 TetherToken (../../share/tether.sol#315-451) has incorrect ERC20 function interface:TetherToken.transferFrom(address,address,uint256) (../../share/tether.sol#350-357)
 TetherToken (../../share/tether.sol#315-451) has incorrect ERC20 function interface:TetherToken.approve(address,uint256) (../../share/tether.sol#369-375)
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface
 ## INFO:Detectors:
 Pragma version^0.4.17 (../../share/tether.sol#5) allows old versions
@@ -115,6 +101,7 @@ Parameter TetherToken.approve(address,uint256)._value (../../share/tether.sol#36
 Parameter TetherToken.allowance(address,address)._owner (../../share/tether.sol#378) is not in mixedCase
 Parameter TetherToken.allowance(address,address)._spender (../../share/tether.sol#378) is not in mixedCase
 Parameter TetherToken.deprecate(address)._upgradedAddress (../../share/tether.sol#387) is not in mixedCase
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 ## INFO:Detectors:
 transferOwnership(address) should be declared external:
@@ -146,6 +133,6 @@ redeem(uint256) should be declared external:
 	- TetherToken.redeem(uint256) (../../share/tether.sol#420-427)
 setParams(uint256,uint256) should be declared external:
 	- TetherToken.setParams(uint256,uint256) (../../share/tether.sol#429-438)
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-as-external
 INFO:Slither:/share/tether.sol analyzed (10 contracts with 40 detectors), 55 result(s) found
-INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
