@@ -180,14 +180,23 @@ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorre
 
 ## INFO:Detectors:
 Parameter BNB.transfer(address,uint256)._to (../../share/bnb.sol#81) is not in mixedCase
+
 Parameter BNB.transfer(address,uint256)._value (../../share/bnb.sol#81) is not in mixedCase
+
 Parameter BNB.approve(address,uint256)._spender (../../share/bnb.sol#92) is not in mixedCase
+
 Parameter BNB.approve(address,uint256)._value (../../share/bnb.sol#92) is not in mixedCase
+
 Parameter BNB.transferFrom(address,address,uint256)._from (../../share/bnb.sol#101) is not in mixedCase
+
 Parameter BNB.transferFrom(address,address,uint256)._to (../../share/bnb.sol#101) is not in mixedCase
+
 Parameter BNB.transferFrom(address,address,uint256)._value (../../share/bnb.sol#101) is not in mixedCase
+
 Parameter BNB.burn(uint256)._value (../../share/bnb.sol#114) is not in mixedCase
+
 Parameter BNB.freeze(uint256)._value (../../share/bnb.sol#123) is not in mixedCase
+
 Parameter BNB.unfreeze(uint256)._value (../../share/bnb.sol#132) is not in mixedCase
 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
