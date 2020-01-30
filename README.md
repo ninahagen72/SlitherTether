@@ -119,40 +119,57 @@ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#builtin
 ## INFO:Detectors:
 Deprecated standard detected THROW None (../../share/bnb.sol#37):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#82):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#83):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#84):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#85):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#94):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#102):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#103):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#104):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#105):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#106):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#115):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#116):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#124):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#125):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#133):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#134):
 	- Usage of "throw" should be replaced with "revert()"
+	
 Deprecated standard detected THROW None (../../share/bnb.sol#143):
-	- Usage of "throw" should be replaced with "revert()"
+	- Usage of "throw" should be replaced with "revert()"	
 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#deprecated-standards
 
