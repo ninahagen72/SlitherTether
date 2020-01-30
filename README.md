@@ -178,18 +178,25 @@ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conform
 ## INFO:Detectors:
 transfer(address,uint256) should be declared external:
 	- BNB.transfer(address,uint256) (../../share/bnb.sol#81-89)
+	
 approve(address,uint256) should be declared external:
 	- BNB.approve(address,uint256) (../../share/bnb.sol#92-97)
+	
 transferFrom(address,address,uint256) should be declared external:
 	- BNB.transferFrom(address,address,uint256) (../../share/bnb.sol#101-112)
+	
 burn(uint256) should be declared external:
 	- BNB.burn(uint256) (../../share/bnb.sol#114-121)
+	
 freeze(uint256) should be declared external:
 	- BNB.freeze(uint256) (../../share/bnb.sol#123-130)
+	
 unfreeze(uint256) should be declared external:
 	- BNB.unfreeze(uint256) (../../share/bnb.sol#132-139)
+	
 withdrawEther(uint256) should be declared external:
 	- BNB.withdrawEther(uint256) (../../share/bnb.sol#142-145)
+	
 fallback() should be declared external:
 	- BNB.fallback() (../../share/bnb.sol#148-149)
 
