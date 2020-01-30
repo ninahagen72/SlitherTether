@@ -1,231 +1,204 @@
-# Slither over Binance
-Results of running slither on bnb.sol
+# Slither over ChainLink
+Results of running slither on chainlink.sol
 
-/share/bnb.sol:37:7: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-      throw;
+## Compilation warnings/errors 
+/share/chainlink.sol:123:5: Warning: Use of the "var" keyword is deprecated.
+    var _allowance = allowed[_from][msg.sender];
 
-/share/bnb.sol:66:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
-    function BNB(
+/share/chainlink.sol:231:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function LinkToken()
 
-/share/bnb.sol:82:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (_to == 0x0) throw;                               // Prevent transfer to 0x0 address. Use burn() instead
+/share/chainlink.sol:88:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(msg.sender, _to, _value);
 
-/share/bnb.sol:83:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if (_value <= 0) throw; 
+/share/chainlink.sol:131:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(_from, _to, _value);
 
-/share/bnb.sol:84:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (balanceOf[msg.sender] < _value) throw;           // Check if the sender has enough
+/share/chainlink.sol:142:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, _value);
 
-/share/bnb.sol:85:55: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (balanceOf[_to] + _value < balanceOf[_to]) throw; // Check for overflows
+/share/chainlink.sol:165:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
 
-/share/bnb.sol:94:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if (_value <= 0) throw; 
+/share/chainlink.sol:177:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
 
-/share/bnb.sol:102:25: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (_to == 0x0) throw;                                // Prevent transfer to 0x0 address. Use burn() instead
+/share/chainlink.sol:196:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(msg.sender, _to, _value, _data);
 
-/share/bnb.sol:103:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if (_value <= 0) throw; 
+/share/chainlink.sol:46:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address who) constant returns (uint256);
 
-/share/bnb.sol:104:40: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (balanceOf[_from] < _value) throw;                 // Check if the sender has enough
+/share/chainlink.sol:47:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address to, uint256 value) returns (bool);
 
-/share/bnb.sol:105:55: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (balanceOf[_to] + _value < balanceOf[_to]) throw;  // Check for overflows
+/share/chainlink.sol:55:3: Warning: No visibility specified. Defaulting to "public". 
+  function allowance(address owner, address spender) constant returns (uint256);
 
-/share/bnb.sol:106:52: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (_value > allowance[_from][msg.sender]) throw;     // Check allowance
+/share/chainlink.sol:56:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferFrom(address from, address to, uint256 value) returns (bool);
 
-/share/bnb.sol:115:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (balanceOf[msg.sender] < _value) throw;            // Check if the sender has enough
+/share/chainlink.sol:57:3: Warning: No visibility specified. Defaulting to "public". 
+  function approve(address spender, uint256 value) returns (bool);
 
-/share/bnb.sol:116:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if (_value <= 0) throw; 
+/share/chainlink.sol:62:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferAndCall(address to, uint value, bytes data) returns (bool success);
 
-/share/bnb.sol:124:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (balanceOf[msg.sender] < _value) throw;            // Check if the sender has enough
+/share/chainlink.sol:68:3: Warning: No visibility specified. Defaulting to "public". 
+  function onTokenTransfer(address _sender, uint _value, bytes _data);
 
-/share/bnb.sol:125:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if (_value <= 0) throw; 
+/share/chainlink.sol:85:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address _to, uint256 _value) returns (bool) {
 
-/share/bnb.sol:133:44: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-        if (freezeOf[msg.sender] < _value) throw;            // Check if the sender has enough
+/share/chainlink.sol:97:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address _owner) constant returns (uint256 balance) {
 
-/share/bnb.sol:134:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if (_value <= 0) throw; 
+/share/chainlink.sol:122:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferFrom(address _from, address _to, uint256 _value) returns (bool) {
 
-/share/bnb.sol:143:26: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
-		if(msg.sender != owner)throw;
+/share/chainlink.sol:140:3: Warning: No visibility specified. Defaulting to "public". 
+  function approve(address _spender, uint256 _value) returns (bool) {
 
-/share/bnb.sol:35:3: Warning: This declaration shadows a builtin symbol.
-  function assert(bool assertion) internal {
+/share/chainlink.sol:152:3: Warning: No visibility specified. Defaulting to "public". 
+  function allowance(address _owner, address _spender) constant returns (uint256 remaining) {
 
-/share/bnb.sol:88:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Transfer(msg.sender, _to, _value);                   // Notify anyone listening that this transfer took place
+/share/chainlink.sol:162:3: Warning: No visibility specified. Defaulting to "public". 
+  function increaseApproval (address _spender, uint _addedValue) 
 
-/share/bnb.sol:110:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Transfer(_from, _to, _value);
+/share/chainlink.sol:169:3: Warning: No visibility specified. Defaulting to "public". 
+  function decreaseApproval (address _spender, uint _subtractedValue) 
 
-/share/bnb.sol:119:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Burn(msg.sender, _value);
+/share/chainlink.sol:13:3: Warning: Function state mutability can be restricted to pure
+  function mul(uint256 a, uint256 b) internal constant returns (uint256) {
 
-/share/bnb.sol:128:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Freeze(msg.sender, _value);
+/share/chainlink.sol:19:3: Warning: Function state mutability can be restricted to pure
+  function div(uint256 a, uint256 b) internal constant returns (uint256) {
 
-/share/bnb.sol:137:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Unfreeze(msg.sender, _value);
+/share/chainlink.sol:26:3: Warning: Function state mutability can be restricted to pure
+  function sub(uint256 a, uint256 b) internal constant returns (uint256) {
 
-/share/bnb.sol:66:5: Warning: No visibility specified. Defaulting to "public". 
-    function BNB(
+/share/chainlink.sol:31:3: Warning: Function state mutability can be restricted to pure
+  function add(uint256 a, uint256 b) internal constant returns (uint256) {
 
-/share/bnb.sol:81:5: Warning: No visibility specified. Defaulting to "public". 
-    function transfer(address _to, uint256 _value) {
+/share/chainlink.sol:213:3: Warning: Function state mutability can be restricted to view
+  function isContract(address _addr)
 
-/share/bnb.sol:92:5: Warning: No visibility specified. Defaulting to "public". 
-    function approve(address _spender, uint256 _value)
-
-/share/bnb.sol:101:5: Warning: No visibility specified. Defaulting to "public". 
-    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {
-
-/share/bnb.sol:114:5: Warning: No visibility specified. Defaulting to "public". 
-    function burn(uint256 _value) returns (bool success) {
-
-/share/bnb.sol:123:2: Warning: No visibility specified. Defaulting to "public". 
-	function freeze(uint256 _value) returns (bool success) {
-
-/share/bnb.sol:132:2: Warning: No visibility specified. Defaulting to "public". 
-	function unfreeze(uint256 _value) returns (bool success) {
-
-/share/bnb.sol:142:2: Warning: No visibility specified. Defaulting to "public". 
-	function withdrawEther(uint256 amount) {
-
-/share/bnb.sol:148:2: Warning: No visibility specified. Defaulting to "public". 
-	function() payable {
-
-/share/bnb.sol:35:3: Warning: Function state mutability can be restricted to pure
-  function assert(bool assertion) internal {
-  
-## INFO:Detectors:
-BNB (../../share/bnb.sol#41-150) has incorrect ERC20 function interface:BNB.transfer(address,uint256) (../../share/bnb.sol#81-89)
-
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface
 
 ## INFO:Detectors:
-SafeMath.assert(bool) (../../share/bnb.sol#35-39) (function) shadows built-in symbol"
-
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#builtin-symbol-shadowing
-
-## INFO:Detectors:
-Deprecated standard detected THROW None (../../share/bnb.sol#37):
-	- Usage of "throw" should be replaced with "revert()"
+LinkToken.totalSupply (../../share/chainlink.sol#226) shadows:
+	- ERC20Basic.totalSupply (../../share/chainlink.sol#45)
 	
-Deprecated standard detected THROW None (../../share/bnb.sol#82):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#83):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#84):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#85):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#94):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#102):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#103):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#104):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#105):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#106):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#115):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#116):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#124):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#125):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#133):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#134):
-	- Usage of "throw" should be replaced with "revert()"
-	
-Deprecated standard detected THROW None (../../share/bnb.sol#143):
-	- Usage of "throw" should be replaced with "revert()"	
-
-Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#deprecated-standards
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variable-shadowing-from-abstract-contracts
 
 ## INFO:Detectors:
-Pragma version^0.4.8 (../../share/bnb.sol#5) allows old versions
+Reentrancy in ERC677Token.transferAndCall(address,uint256,bytes) (../../share/chainlink.sol#191-201):
+	External calls:
+	- contractFallback(_to,_value,_data) (../../share/chainlink.sol#198)
+	Event emitted after the call(s):
+	- Transfer(msg.sender,_to,_value,_data) (../../share/chainlink.sol#196)
+	
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+
+## INFO:Detectors:
+ERC677Token.isContract(address) (../../share/chainlink.sol#213-220) uses assembly
+	- INLINE ASM None (../../share/chainlink.sol#218-219)
+	
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+
+## INFO:Detectors:
+Pragma version^0.4.16 (../../share/chainlink.sol#5) allows old versions
 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 
 ## INFO:Detectors:
-Parameter BNB.transfer(address,uint256)._to (../../share/bnb.sol#81) is not in mixedCase
+Parameter BasicToken.transfer(address,uint256)._to (../../share/chainlink.sol#85) is not in mixedCase
 
-Parameter BNB.transfer(address,uint256)._value (../../share/bnb.sol#81) is not in mixedCase
+Parameter BasicToken.transfer(address,uint256)._value (../../share/chainlink.sol#85) is not in mixedCase
 
-Parameter BNB.approve(address,uint256)._spender (../../share/bnb.sol#92) is not in mixedCase
+Parameter BasicToken.balanceOf(address)._owner (../../share/chainlink.sol#97) is not in mixedCase
 
-Parameter BNB.approve(address,uint256)._value (../../share/bnb.sol#92) is not in mixedCase
+Parameter StandardToken.transferFrom(address,address,uint256)._from (../../share/chainlink.sol#122) is not in mixedCase
 
-Parameter BNB.transferFrom(address,address,uint256)._from (../../share/bnb.sol#101) is not in mixedCase
+Parameter StandardToken.transferFrom(address,address,uint256)._to (../../share/chainlink.sol#122) is not in mixedCase
 
-Parameter BNB.transferFrom(address,address,uint256)._to (../../share/bnb.sol#101) is not in mixedCase
+Parameter StandardToken.transferFrom(address,address,uint256)._value (../../share/chainlink.sol#122) is not in mixedCase
 
-Parameter BNB.transferFrom(address,address,uint256)._value (../../share/bnb.sol#101) is not in mixedCase
+Parameter StandardToken.approve(address,uint256)._spender (../../share/chainlink.sol#140) is not in mixedCase
 
-Parameter BNB.burn(uint256)._value (../../share/bnb.sol#114) is not in mixedCase
+Parameter StandardToken.approve(address,uint256)._value (../../share/chainlink.sol#140) is not in mixedCase
 
-Parameter BNB.freeze(uint256)._value (../../share/bnb.sol#123) is not in mixedCase
+Parameter StandardToken.allowance(address,address)._owner (../../share/chainlink.sol#152) is not in mixedCase
 
-Parameter BNB.unfreeze(uint256)._value (../../share/bnb.sol#132) is not in mixedCase
+Parameter StandardToken.allowance(address,address)._spender (../../share/chainlink.sol#152) is not in mixedCase
+
+Parameter StandardToken.increaseApproval(address,uint256)._spender (../../share/chainlink.sol#162) is not in mixedCase
+
+Parameter StandardToken.increaseApproval(address,uint256)._addedValue (../../share/chainlink.sol#162) is not in mixedCase
+
+Parameter StandardToken.decreaseApproval(address,uint256)._spender (../../share/chainlink.sol#169) is not in mixedCase
+
+Parameter StandardToken.decreaseApproval(address,uint256)._subtractedValue (../../share/chainlink.sol#169) is not in 
+mixedCase
+
+Parameter ERC677Token.transferAndCall(address,uint256,bytes)._to (../../share/chainlink.sol#191) is not in mixedCase
+
+Parameter ERC677Token.transferAndCall(address,uint256,bytes)._value (../../share/chainlink.sol#191) is not in mixedCase
+
+Parameter ERC677Token.transferAndCall(address,uint256,bytes)._data (../../share/chainlink.sol#191) is not in mixedCase
+
+Parameter ERC677Token.contractFallback(address,uint256,bytes)._to (../../share/chainlink.sol#206) is not in mixedCase
+
+Parameter ERC677Token.contractFallback(address,uint256,bytes)._value (../../share/chainlink.sol#206) is not in mixedCase
+
+Parameter ERC677Token.contractFallback(address,uint256,bytes)._data (../../share/chainlink.sol#206) is not in mixedCase
+
+Parameter LinkToken.transferAndCall(address,uint256,bytes)._to (../../share/chainlink.sol#243) is not in mixedCase
+
+Parameter LinkToken.transferAndCall(address,uint256,bytes)._value (../../share/chainlink.sol#243) is not in mixedCase
+
+Parameter LinkToken.transferAndCall(address,uint256,bytes)._data (../../share/chainlink.sol#243) is not in mixedCase
+
+Parameter LinkToken.transfer(address,uint256)._to (../../share/chainlink.sol#256) is not in mixedCase
+
+Parameter LinkToken.transfer(address,uint256)._value (../../share/chainlink.sol#256) is not in mixedCase
+
+Parameter LinkToken.approve(address,uint256)._spender (../../share/chainlink.sol#269) is not in mixedCase
+
+Parameter LinkToken.approve(address,uint256)._value (../../share/chainlink.sol#269) is not in mixedCase
+
+Parameter LinkToken.transferFrom(address,address,uint256)._from (../../share/chainlink.sol#283) is not in mixedCase
+
+Parameter LinkToken.transferFrom(address,address,uint256)._to (../../share/chainlink.sol#283) is not in mixedCase
+
+Parameter LinkToken.transferFrom(address,address,uint256)._value (../../share/chainlink.sol#283) is not in mixedCase
+
+Constant LinkToken.totalSupply (../../share/chainlink.sol#226) is not in UPPER_CASE_WITH_UNDERSCORES
 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 
 ## INFO:Detectors:
-transfer(address,uint256) should be declared external:
-	- BNB.transfer(address,uint256) (../../share/bnb.sol#81-89)
-	
-approve(address,uint256) should be declared external:
-	- BNB.approve(address,uint256) (../../share/bnb.sol#92-97)
-	
-transferFrom(address,address,uint256) should be declared external:
-	- BNB.transferFrom(address,address,uint256) (../../share/bnb.sol#101-112)
-	
-burn(uint256) should be declared external:
-	- BNB.burn(uint256) (../../share/bnb.sol#114-121)
-	
-freeze(uint256) should be declared external:
-	- BNB.freeze(uint256) (../../share/bnb.sol#123-130)
-	
-unfreeze(uint256) should be declared external:
-	- BNB.unfreeze(uint256) (../../share/bnb.sol#132-139)
-	
-withdrawEther(uint256) should be declared external:
-	- BNB.withdrawEther(uint256) (../../share/bnb.sol#142-145)
-	
-fallback() should be declared external:
-	- BNB.fallback() (../../share/bnb.sol#148-149)
+ERC20Basic.totalSupply (../../share/chainlink.sol#45) should be constant
+
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+
+## INFO:Detectors:
+balanceOf(address) should be declared external:
+	- BasicToken.balanceOf(address) (../../share/chainlink.sol#97-99)
+	- ERC20Basic.balanceOf(address) (../../share/chainlink.sol#46)
+
+allowance(address,address) should be declared external:
+	- StandardToken.allowance(address,address) (../../share/chainlink.sol#152-154)
+	- ERC20.allowance(address,address) (../../share/chainlink.sol#55)
+
+onTokenTransfer(address,uint256,bytes) should be declared external:
+	- ERC677Receiver.onTokenTransfer(address,uint256,bytes) (../../share/chainlink.sol#68)
+
+increaseApproval(address,uint256) should be declared external:
+	- StandardToken.increaseApproval(address,uint256) (../../share/chainlink.sol#162-167)
+
+decreaseApproval(address,uint256) should be declared external:
+	- StandardToken.decreaseApproval(address,uint256) (../../share/chainlink.sol#169-179)
 
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-as-external
 
-analyzed (2 contracts with 40 detectors), 39 result(s) found
+analyzed (9 contracts with 40 detectors), 41 result(s) found
