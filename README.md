@@ -12,7 +12,7 @@ Results of running slither on bnb.sol
 
 /share/bnb.sol:83:20: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
 		if (_value <= 0) throw; 
-		                 ^---^
+
 /share/bnb.sol:84:45: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
         if (balanceOf[msg.sender] < _value) throw;           // Check if the sender has enough
 
@@ -108,10 +108,12 @@ Results of running slither on bnb.sol
   
 ## INFO:Detectors:
 BNB (../../share/bnb.sol#41-150) has incorrect ERC20 function interface:BNB.transfer(address,uint256) (../../share/bnb.sol#81-89)
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface
 
 ## INFO:Detectors:
 SafeMath.assert(bool) (../../share/bnb.sol#35-39) (function) shadows built-in symbol"
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#builtin-symbol-shadowing
 
 ## INFO:Detectors:
@@ -151,10 +153,12 @@ Deprecated standard detected THROW None (../../share/bnb.sol#134):
 	- Usage of "throw" should be replaced with "revert()"
 Deprecated standard detected THROW None (../../share/bnb.sol#143):
 	- Usage of "throw" should be replaced with "revert()"
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#deprecated-standards
 
 ## INFO:Detectors:
 Pragma version^0.4.8 (../../share/bnb.sol#5) allows old versions
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
 
 ## INFO:Detectors:
@@ -168,6 +172,7 @@ Parameter BNB.transferFrom(address,address,uint256)._value (../../share/bnb.sol#
 Parameter BNB.burn(uint256)._value (../../share/bnb.sol#114) is not in mixedCase
 Parameter BNB.freeze(uint256)._value (../../share/bnb.sol#123) is not in mixedCase
 Parameter BNB.unfreeze(uint256)._value (../../share/bnb.sol#132) is not in mixedCase
+
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
 
 ## INFO:Detectors:
