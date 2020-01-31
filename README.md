@@ -1,54 +1,158 @@
-# Securifiy over Tether
-Results of running securfiy on tether.sol
+# SmartDec over Tether
+Results of running SmartDec on tether.sol
 
 ## Compilation warnings/errors 
-/share/tether.sol:52:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
-    function Ownable() public {
+Compiler version not fixed
+Lines: 5-5
+Severity: 1
+Pattern id: 23fc32
 
-/share/tether.sol:172:9: Warning: Use of the "var" keyword is deprecated.
-        var _allowance = allowed[_from][msg.sender];
+Prefer external to public visibility level
+Lines: 52-54
+Severity: 1
+Pattern id: 73ufc1
 
-/share/tether.sol:330:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
-    function TetherToken(uint _initialSupply, string _name, string _symbol, uint _decimals) public {
+Prefer external to public visibility level
+Lines: 68-72
+Severity: 1
+Pattern id: 73ufc1
 
-/share/tether.sol:136:13: Warning: Invoking events without "emit" prefix is deprecated.
-            Transfer(msg.sender, owner, fee);
+Deprecated constructions
+Lines: 83-83
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:138:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Transfer(msg.sender, _to, sendAmount);
+Deprecated constructions
+Lines: 84-84
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:189:13: Warning: Invoking events without "emit" prefix is deprecated.
-            Transfer(_from, owner, fee);
+Deprecated constructions
+Lines: 94-94
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:191:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Transfer(_from, _to, sendAmount);
+Use of SafeMath
+Lines: 105-105
+Severity: 1
+Pattern id: 837cac
 
-/share/tether.sol:208:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Approval(msg.sender, _spender, _value);
+Deprecated constructions
+Lines: 146-148
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:256:5: Warning: Invoking events without "emit" prefix is deprecated.
-    Pause();
+Using approve function of the ERC-20 token standard
+Lines: 199-209
+Severity: 2
+Pattern id: af782c
 
-/share/tether.sol:264:5: Warning: Invoking events without "emit" prefix is deprecated.
-    Unpause();
+Deprecated constructions
+Lines: 217-219
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:283:9: Warning: Invoking events without "emit" prefix is deprecated.
-        AddedBlackList(_evilUser);
+Prefer external to public visibility level
+Lines: 254-257
+Severity: 1
+Pattern id: 73ufc1
 
-/share/tether.sol:288:9: Warning: Invoking events without "emit" prefix is deprecated.
-        RemovedBlackList(_clearedUser);
+Prefer external to public visibility level
+Lines: 262-265
+Severity: 1
+Pattern id: 73ufc1
 
-/share/tether.sol:296:9: Warning: Invoking events without "emit" prefix is deprecated.
-        DestroyedBlackFunds(_blackListedUser, dirtyFunds);
+Deprecated constructions
+Lines: 271-273
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:390:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Deprecate(_upgradedAddress);
+Deprecated constructions
+Lines: 275-277
+Severity: 1
+Pattern id: 28fa69
 
-/share/tether.sol:412:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Issue(amount);
+Prefer external to public visibility level
+Lines: 281-284
+Severity: 1
+Pattern id: 73ufc1
 
-/share/tether.sol:426:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Redeem(amount);
+Prefer external to public visibility level
+Lines: 286-289
+Severity: 1
+Pattern id: 73ufc1
 
-/share/tether.sol:437:9: Warning: Invoking events without "emit" prefix is deprecated.
-        Params(basisPointsRate, maximumFee);
+Prefer external to public visibility level
+Lines: 291-297
+Severity: 1
+Pattern id: 73ufc1
+
+Prefer external to public visibility level
+Lines: 330-337
+Severity: 1
+Pattern id: 73ufc1
+
+Upgrade code to Solidity 0.5.x
+Lines: 330-330
+Severity: 1
+Pattern id: 341gim
+
+Upgrade code to Solidity 0.5.x
+Lines: 330-330
+Severity: 1
+Pattern id: 341gim
+
+Prefer external to public visibility level
+Lines: 340-347
+Severity: 1
+Pattern id: 73ufc1
+
+Prefer external to public visibility level
+Lines: 350-357
+Severity: 1
+Pattern id: 73ufc1
+
+Deprecated constructions
+Lines: 360-366
+Severity: 1
+Pattern id: 28fa69
+
+Using approve function of the ERC-20 token standard
+Lines: 369-375
+Severity: 2
+Pattern id: af782c
+
+Deprecated constructions
+Lines: 378-384
+Severity: 1
+Pattern id: 28fa69
+
+Prefer external to public visibility level
+Lines: 387-391
+Severity: 1
+Pattern id: 73ufc1
+
+Deprecated constructions
+Lines: 394-400
+Severity: 1
+Pattern id: 28fa69
+
+Prefer external to public visibility level
+Lines: 406-413
+Severity: 1
+Pattern id: 73ufc1
+
+Prefer external to public visibility level
+Lines: 420-427
+Severity: 1
+Pattern id: 73ufc1
+
+Overpowered role
+Lines: 429-438
+Severity: 2
+Pattern id: j83hf7
+
+Prefer external to public visibility level
+Lines: 429-438
+Severity: 1
+Pattern id: 73ufc1
